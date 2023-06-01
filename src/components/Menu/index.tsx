@@ -4,6 +4,7 @@ import { AppBarItemsEnum } from '../../enums'
 import { Image } from '@mui/icons-material'
 import MenuIcon from '@mui/icons-material/Menu';
 import { Img } from '../Img';
+import AppBarImage from '../../images/vilmar-fernandez-icon-appbar-icon.png'
 //onClick={handleDrawerToggle}
 
 function Menu() {
@@ -13,7 +14,7 @@ function Menu() {
                 <AppBar component={'div'}>
                     <Toolbar>
                         <Box sx={{ display: 'block', flexGrow: 1 }}>
-                            <Img src='../../images/vilmar-fernandez-icon-appbar-icon.png' alt='image' />
+                            <Img src={AppBarImage} alt='image' />
                         </Box>
                         <Box sx={{ display: { xl: 'block' } }}>
                             {AppBarItemsEnum.map((item) => (
