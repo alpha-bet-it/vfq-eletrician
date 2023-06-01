@@ -11,3 +11,7 @@ export const StyledLink = styled(Link)`
         color: red;
     }
 `
+
+export const ImageContainer = styled.div`
+    flexGrow: 1;
+`

@@ -1,18 +1,20 @@
 import { StyledLink } from './menu'
 import { AppBar, Box, List, ListItem, ListItemButton, ListItemText, Toolbar, IconButton, Divider, Button, Avatar } from '@mui/material'
 import { AppBarItemsEnum } from '../../enums'
-//onClick={handleDrawerToggle} 
+import { Image } from '@mui/icons-material'
+import MenuIcon from '@mui/icons-material/Menu';
+import { Img } from '../Img';
+//onClick={handleDrawerToggle}
+
 function Menu() {
     return (
         <>
-            
-            <Box sx={{ textAlign: 'center', display: 'flex' }}>
+            <Box sx={{ display: 'flex' }}>
                 <AppBar component={'div'}>
                     <Toolbar>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <img src="../../" alt='Logo' />
+                        <Box sx={{ display: 'block', flexGrow: 1 }}>
+                            <Img src='../../images/vilmar-fernandez-icon-appbar-icon.png' alt='image' />
                         </Box>
-                        <Divider />
                         <Box sx={{ display: { xl: 'block' } }}>
                             {AppBarItemsEnum.map((item) => (
                                 <Button key={item} sx={{ color: '#000000' }}>
