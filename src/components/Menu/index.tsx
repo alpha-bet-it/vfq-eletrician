@@ -92,7 +92,7 @@ function Menu () {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { sm: 'block' },
+                        display: { md: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '65%' },
                     }}
                 >
