@@ -29,6 +29,13 @@ export const Theme = createTheme({
             defaultProps: {
                 color: 'secondary',
             }
+        },
+        MuiToolbar: {
+            styleOverrides: {
+                root: {
+
+                }
+            }
         }
     }
 })

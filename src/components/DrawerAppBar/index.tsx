@@ -3,14 +3,6 @@ import { Box, Divider, Icon, List, ListItem, ListItemButton, ListItemText, MenuI
 import MenuIcon from '@mui/icons-material/Menu'
 import { AppBarItemsEnum } from '../../enums'
 
-// export default function DrawerAppBar() {
-//     const [ mobileOpen, setMobileOpen ] = React.useState(false)
-    
-//     const handleDrawerToggle = () => {
-//         setMobileOpen((prevState) => !prevState)
-//     }
+export default function DrawerAppBar () {
 
-//     return(
-        
-//     )
-// }
+}
