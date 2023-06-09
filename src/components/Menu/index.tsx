@@ -31,25 +31,25 @@ function Menu () {
 
     const drawer =  (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-                <Typography variant="h6" sx={{ my: 2 }}>
-                    VF-E
-                </Typography>
-                <Divider />
-                <List>
-                    {AppBarItemsEnum.map((item) => (
-                        <ListItem key={item} disablePadding>
-                            <ListItemButton sx={{ textAlign: 'center' }}>
-                                <ListItemText primary={item.toUpperCase()} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
-            </Box>
+            <Typography variant="h6" sx={{ my: 2 }}>
+                VF-E
+            </Typography>
+            <Divider />
+            <List>
+                {AppBarItemsEnum.map((item) => (
+                    <ListItem key={item} disablePadding>
+                        <ListItemButton sx={{ textAlign: 'center' }}>
+                            <ListItemText primary={item.toUpperCase()} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
     )
     return (
         <>
             <Box sx={{ display: 'flex', margin: 0, padding: 0 }}>
-                <AppBar component={'div'} sx={{ ...boxShadowProps, position: 'sticky' }}>
+                <AppBar component={'div'} sx={{ ...boxShadowProps, position: 'sticky', backgroundColor: '#F0F6FA' }}>
                     <Box component={'div'} sx={{ backgroundColor: '#153243', color: '#E6EBE0', display: 'flex', justifyContent: 'space-around' }}>
                         <Box component={'div'} sx={{ maxWidth: '80%', width: '100%', display: 'flex', justifyContent: 'end' }}>
                             <Box component={'div'} sx={{ display: 'flex', padding: '10px 0' }}>
@@ -62,7 +62,7 @@ function Menu () {
                     </Box>
                     <Toolbar sx={{ padding: '20px 0', justifyContent: { sm: 'start', md: 'space-around' } }} disableGutters>
                         <IconButton
-                            color='inherit'
+                            color='secondary'
                             sx={{ mr: 2, display: { md: 'none', xs: 'block' } }}
                             onClick={handleDrawerToggle}
                         >
@@ -75,7 +75,7 @@ function Menu () {
                             <Box>
                                 {AppBarItemsEnum.map((item) => (
                                     <Button key={item} sx={{ ":last-child": { paddingRight: 0 }, ':hover': { backgroundColor: 'transparent' } }}>
-                                        <Typography sx={{ fontSize: '1rem', fontWeight: 500, letterSpacing: '0.03rem', ':hover': { fontWeight: 600 } }}>
+                                        <Typography sx={{ fontSize: '1rem', fontWeight: 500, letterSpacing: '0.03rem', ':hover': { color: '#2C698C' }, color: '#0F232F' }}>
                                             {item.toUpperCase()}
                                         </Typography>
                                     </Button>

@@ -8,5 +8,4 @@ export const CarouselContainer = styled.div`
     position: relative;
     display: flex;
     overflow: hidden;
-
 `
