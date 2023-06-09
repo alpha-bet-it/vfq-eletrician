@@ -48,8 +48,8 @@ function Menu () {
     )
     return (
         <>
-            <Box sx={{ display: 'flex' }}>
-                <AppBar component={'div'} sx={{ ...boxShadowProps }}>
+            <Box sx={{ display: 'flex', margin: 0, padding: 0 }}>
+                <AppBar component={'div'} sx={{ ...boxShadowProps, position: 'sticky' }}>
                     <Box component={'div'} sx={{ backgroundColor: '#153243', color: '#E6EBE0', display: 'flex', justifyContent: 'space-around' }}>
                         <Box component={'div'} sx={{ maxWidth: '80%', width: '100%', display: 'flex', justifyContent: 'end' }}>
                             <Box component={'div'} sx={{ display: 'flex', padding: '10px 0' }}>
