@@ -63,9 +63,20 @@ export const IndicatorsContainer = styled.div`
 `
 
 export const Indicator = styled.div<{active?: boolean}>`
-    width: ${props => props.active ? '.9rem' : '.8rem'};
-    height: ${props => props.active ? '.9rem' : '.8rem'};
+    width: .8rem;
+    height: .8rem;
     border-radius: 9999px;
+    padding: ${props => props.active ? '0.2rem' : '0'};
     background-color: ${props => props.active ? 'rgba(240, 246, 250)' : 'rgba(240, 246, 250, 0.6)'};
-    margin: .2rem
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    margin: .2rem;
+
+    @media(max-width:800px) {
+        width: .6rem;
+        height: .6rem;
+        margin: .15rem;
+        padding: ${props => props.active ? '0.15rem' : '0'};
+    }
 `
