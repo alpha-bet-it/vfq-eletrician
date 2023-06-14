@@ -26,7 +26,7 @@ export function Carousel() {
                                     maxWidth: '100%',
                                     height: '100%',
                                     overflowClipMargin: 'content-box',
-                                    overflow: 'clip', aspectRatio: 1920/770,
+                                    overflow: 'clip', aspectRatio: 1920/830,
                                 }}
                                 style={{
                                     transform: `translateX(-${current * 100}%)`,
