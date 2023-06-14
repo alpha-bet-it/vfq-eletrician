@@ -1,21 +1,24 @@
-import React from 'react';
-import Menu from './components/Menu';
-import { BrowserRouter } from 'react-router-dom'
-import { Container, ThemeProvider } from '@mui/material';
-import { Theme } from './constants/theme';
+import React from 'react'
+import Menu from './components/Menu'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Container, ThemeProvider } from '@mui/material'
+import { Theme } from './constants/theme'
 import { Carousel } from './components/Carousel'
+import { MainPage } from './pages/main'
 
-function App() {
+function App () {
   return (
     <ThemeProvider theme={Theme}>
-      <BrowserRouter>
-        <Container maxWidth='md' disableGutters sx={{ '@media(min-width: 900px)': { width: '100%', maxWidth: '1920px' }}}>
+      <Container maxWidth='md' disableGutters sx={{ '@media(min-width: 900px)': { width: '100%', maxWidth: '1920px' } }}>
+        <BrowserRouter>
           <Menu />
-          <Carousel />
-        </Container>
-      </BrowserRouter>
+          <Routes>
+            <Route path='/' element={<MainPage />}/>
+          </Routes>
+        </BrowserRouter>
+      </Container>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
