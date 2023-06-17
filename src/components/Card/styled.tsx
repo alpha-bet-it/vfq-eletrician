@@ -20,14 +20,14 @@ export const CardContainer = styled.div`
                     0px 2px 12px 0px rgba(0,0,0,0.3);
         cursor: pointer;
     }
-    transition: box-shadow ease-in-out 0.2s;
+    transition: box-shadow ease-out 0.4s;
     &:hover div h6 {
         inset: auto auto 300px;
-        transition: inset .3s ease-out
+        transition: inset .3s ease-out;
     };
     &:hover div p {
         opacity: 1;
-        transition: opacity .2s .4s ease-out
+        transition: opacity .2s .4s ease-out;
     }
 `
 
@@ -38,7 +38,7 @@ export const TextContainer = styled.div<{borderBottom?: boolean}>`
         padding-bottom: 0.5rem;
         position: absolute;
         inset: auto auto 30px;
-        transition: inset .3s .3s ease-out
+        transition: inset .3s .3s ease-out;
     };
 
     & > p {
