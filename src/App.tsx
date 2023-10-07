@@ -1,7 +1,7 @@
-import Menu from './components/Menu'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Container, ThemeProvider } from '@mui/material'
 import { Theme } from './constants/theme'
+import Menu from './components/Menu'
 import { MainPage } from './pages/main'
 
 function App () {

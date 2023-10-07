@@ -1,7 +1,7 @@
 import { Img } from '../Img'
-import { ButtonsContainer, CarouselContainer, CarouselIndicatorContainer, ChevronBtn, Indicator, IndicatorsContainer } from './styled'
-import { ChevronLeft, ChevronRight, ChevronRightRounded } from '@mui/icons-material'
-import { Slider } from '../../functions/slider'
+import { ButtonsContainer, CarouselContainer, CarouselIndicatorContainer, ChevronBtn, Indicator, IndicatorsContainer } from './styles'
+import { ChevronLeft, ChevronRight } from '@mui/icons-material'
+import { useSliderNavigation } from '../../hooks/useSliderNavigation'
 
 const images = [
     'https://i.redd.it/1m01yqoae5l51.png',
@@ -11,17 +11,15 @@ const images = [
 ]
 
 export function Carousel() {
-    const { prev, next, current } = Slider(images)
+    const { prev, next, current } = useSliderNavigation(images)
 
     return (
         <>
             <CarouselContainer >
-                {images.map((image) => {
-                    console.log(image)
-                    return (<Img
+                {images.map((image, index) => (<Img
                                 src={image}
                                 alt='img'
-                                key={image}
+                                key={`carousel-item-${index}`}
                                 sx={{ 
                                     maxWidth: '100%',
                                     height: '100%',
@@ -32,8 +30,7 @@ export function Carousel() {
                                     transform: `translateX(-${current * 100}%)`,
                                     transition: 'transform ease-out 500ms',
                                 }}
-                            />)
-                })}
+                            />))}
                 <ButtonsContainer>
                     <ChevronBtn onClick={prev}>
                         <ChevronLeft sx={{ fontSize: '2rem', color: '#2C698C' }}/>

@@ -1,5 +1,5 @@
-import { Typography } from '@mui/material'
-import { CardContainer, CardsContainer, TextContainer } from './styled'
+// import { Typography } from '@mui/material'
+import { CardContainer, TextContainer } from './styles'
 
 interface CardProps {
     title: string
