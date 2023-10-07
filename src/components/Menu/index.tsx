@@ -1,3 +1,5 @@
+import React from 'react'
+import { AiOutlineWhatsApp } from 'react-icons/ai'
 import {
     AppBar,
     Box,
@@ -11,13 +13,11 @@ import {
     ListItemButton,
     ListItemText
 } from '@mui/material'
-import { AppBarItemsEnum } from '../../enums'
-import { Img } from '../Img'
-import AppBarImage from '../../images/vilmar-fernandez-logo-original-PhotoRoom.png-PhotoRoom-300-120.png'
-import { AiOutlineWhatsApp } from 'react-icons/ai'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
-import React from 'react'
+import { AppBarItemsEnum } from '../../constants/menu'
+import { Img } from '../Img'
+import AppBarImage from '../../images/vilmar-fernandez-logo-original-PhotoRoom.png-PhotoRoom-300-120.png'
 
 function Menu () {
     const boxShadowProps = {
