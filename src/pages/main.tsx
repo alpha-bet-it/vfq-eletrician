@@ -1,6 +1,7 @@
 import { Card } from '../components/Card'
 import { CardsContainer, CardsSection } from '../components/Card/styled'
 import { Carousel } from '../components/Carousel'
+import { Img } from '../components/Img'
 
 const cards = [
   {
@@ -50,7 +51,7 @@ const cards = [
 export const MainPage = () => {
   return (
     <>
-      <Carousel />
+      <Img src={'../images/trabalhador.jpg'} alt={'Eletricista cortando fios'} />
       <CardsSection>
         <CardsContainer>
           {cards.map(({title, description}) => <Card title={title} description={description}/>)}
