@@ -4,6 +4,9 @@ import { CardsContainer, CardsSection } from '../components/Card/styles'
 import { Hero } from '../components/Hero'
 import { Grid } from '@mui/material'
 
+// TODO:adicionar tag referencia
+// TODO <a href="https://br.freepik.com/fotos-gratis/um-tecnico-em-eletricidade-trabalhando-em-uma-central-com-fusiveis_10507549.htm#page=2&query=eletricity&position=10&from_view=search&track=sph">Imagem de pvproductions</a> no Freepik
+
 
 
 export const MainPage = () => {
