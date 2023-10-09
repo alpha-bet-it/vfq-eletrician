@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import {
     AppBar,
@@ -18,12 +18,28 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { AppBarItemsEnum } from '../../constants/menu'
 import { Img } from '../Img'
 import AppBarImage from '../../images/vilmar-fernandez-logo-original-PhotoRoom.png-PhotoRoom-300-120.png'
+import { StyledAppBar } from './styles'
 
 function Menu () {
-    const boxShadowProps = {
-        boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.1), 0px 4px 5px 0px rgba(0,0,0,0.1), 0px 1px 10px 0px rgba(0,0,0,0.1)'
-    }
-    const [mobileOpen, setMobileOpen] = React.useState(false)
+    // const boxShadowProps = {
+    //     boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.1), 0px 4px 5px 0px rgba(0,0,0,0.1), 0px 1px 10px 0px rgba(0,0,0,0.1)'
+    // }
+    const [mobileOpen, setMobileOpen] = useState(false)
+    // const [menuPosition, setMenuPosition] = useState('relative')
+
+    // const stickNavbar = () => {
+    //     window.scrollY >= 155 ? setMenuPosition('fixed') : setMenuPosition('relative')
+    // }
+
+    // useEffect(() => {
+    //     window.addEventListener('scroll', stickNavbar)
+
+    //     return () => {
+    //         window.removeEventListener('scroll', stickNavbar)
+    //     }
+    // }, [])
+
+
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState)
@@ -49,10 +65,10 @@ function Menu () {
     return (
         <>
             <Box sx={{ display: 'flex', margin: 0, padding: 0 }}>
-                <AppBar component={'div'} sx={{ ...boxShadowProps, position: 'sticky', backgroundColor: 'rgba(230, 235, 224, 0.6)' }}>
-                    <Box component={'div'} sx={{ backgroundColor: '#153243', color: '#E6EBE0', display: 'flex', justifyContent: 'space-around' }}>
-                        <Box component={'div'} sx={{ maxWidth: '80%', width: '100%', display: 'flex', justifyContent: 'end' }}>
-                            <Box component={'div'} sx={{ display: 'flex', padding: '10px 0' }}>
+                <StyledAppBar>
+                    <Box sx={{ backgroundColor: '#153243', color: '#E6EBE0', display: 'flex', justifyContent: 'space-around' }}>
+                        <Box sx={{ maxWidth: '80%', width: '100%', display: 'flex', justifyContent: 'end' }}>
+                            <Box sx={{ display: 'flex', padding: '10px 0' }}>
                                 <AiOutlineWhatsApp fontSize={'1.5rem'} />
                                 <Typography sx={{ fontSize: '1rem', fontWeight: 500, paddingLeft: '5px' }}>
                                     (62) 9 9334-9288
@@ -83,7 +99,7 @@ function Menu () {
                             </Box>
                         </Box>
                     </Toolbar>
-                </AppBar>
+                </StyledAppBar>
                 <Drawer
                     variant="temporary"
                     open={mobileOpen}

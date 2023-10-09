@@ -1,7 +1,7 @@
 import { Box, BoxProps } from '@mui/material'
 
 type BoxImageProps = {
-    src: string
+    src?: string
     alt: string
 }
 
