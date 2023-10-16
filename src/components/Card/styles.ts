@@ -3,11 +3,12 @@ import styled from 'styled-components'
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
-    background: #303030; background: -moz-linear-gradient(0deg,  #303030 0%,#5d5d5d 100%); background: -webkit-linear-gradient(0deg,  #303030 0%,#5d5d5d 100%); background: linear-gradient(0deg,  #303030 0%,#5d5d5d 100%);
+    background: #153242;
     margin: 1rem;
-    max-width: calc(100%/3);
+    max-width: 100%;
     position: relative;
-    min-height: 400px;
+    height: 35vh;
+    max-height: 100vh;
     width: 100%;
     flex: 1 0 25%;
     border-radius: 5px;
@@ -21,13 +22,12 @@ export const CardContainer = styled.div`
         cursor: pointer;
     }
     transition: box-shadow ease-out 0.4s;
-    &:hover div h6 {
-        inset: auto auto 300px;
-        transition: inset .3s ease-out;
-    };
-    &:hover div p {
-        opacity: 1;
-        transition: opacity .2s .4s ease-out;
+    @media(max-width: 500px) {
+        flex: 100%;
+    }
+    @media(max-height: 400px) {
+        height: 80vh;
+        flex: 1 0 30%;
     }
 `
 
@@ -35,18 +35,10 @@ export const TextContainer = styled.div<{borderBottom?: boolean}>`
     width: 100%;
     && > h6 {
         font-size: 1.8rem;
-        padding-bottom: 0.5rem;
-        position: absolute;
-        inset: auto auto 30px;
-        transition: inset .3s .3s ease-out;
     };
 
     & > p {
-        font-size: 1.1rem;
-        inset: auto auto 80px;
-        opacity: 0;
         position: absolute;
-        transition: opacity .3s ease-out
     };
     & > p, h6 {
         letter-spacing: .05rem;
@@ -56,16 +48,13 @@ export const TextContainer = styled.div<{borderBottom?: boolean}>`
     color: rgba(240, 246, 250);
 `
 
-export const CardsSection = styled.div`
+export const CardsSection = styled.section`
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    box-sizing: border-box;
     padding: 2rem 0;
-    width: 100%;
 `
 
-export const CardsContainer = styled.section`
+export const CardsContainer = styled.div`
     max-width: 80%;
     width: 100%;
     display: flex;

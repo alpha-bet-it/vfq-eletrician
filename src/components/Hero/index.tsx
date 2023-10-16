@@ -18,7 +18,7 @@ export const Hero = () => {
         >
             <Box
                 sx={{
-                    backgroundColor: 'rgba(21,50,66, 0.6)',
+                    background: 'linear-gradient(90deg, rgba(21,50,66,1) 37%, rgba(21,50,66,0.5970982142857143) 100%)',
                     width: '100%',
                     height: '100%',
                     display: 'flex',
