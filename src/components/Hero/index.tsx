@@ -18,7 +18,7 @@ export const Hero = () => {
         >
             <Box
                 sx={{
-                    background: 'linear-gradient(90deg, rgba(21,50,66,1) 37%, rgba(21,50,66,0.5970982142857143) 100%)',
+                    background: 'linear-gradient(90deg, rgba(21,50,66,1) 40%, rgba(21,50,66,0.6) 100%)',
                     width: '100%',
                     height: '100%',
                     display: 'flex',
@@ -28,7 +28,8 @@ export const Hero = () => {
                 <Box
                     sx={{
                         maxWidth: '80%',
-                        display: 'flex'
+                        display: 'flex',
+                        flexDirection: 'column',
                     }}
                 >
                     <HeroText>
