@@ -4,11 +4,11 @@ export const Theme = createTheme({
     palette: {
         primary: {
             main: '#FDF7FA',
-            contrastText: '#153243'
+            contrastText: '#F4B324'
         },
         secondary: {
-            main: '#153243',
-            contrastText: '#E6EBE0'
+            main: '##F4B324',
+            contrastText: '#FDF7FA'
         },
         background: {
             default: '#FDF7FA',

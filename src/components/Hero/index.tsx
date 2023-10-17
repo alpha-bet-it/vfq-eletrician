@@ -1,8 +1,9 @@
 import HeroImage from '../../images/tecnico.jpg'
-import { Box } from '@mui/material'
+import { Box, useTheme } from '@mui/material'
 import { HeroText } from './styles'
 
 export const Hero = () => {
+    const theme = useTheme()
     return (
         <Box
             sx={{
@@ -32,7 +33,7 @@ export const Hero = () => {
                         flexDirection: 'column',
                     }}
                 >
-                    <HeroText>
+                    <HeroText variant='h1'>
                         Soluções elétricas confiáveis para sua casa ou negócio.
                     </HeroText>
                 </Box>

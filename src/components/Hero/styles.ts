@@ -1,11 +1,12 @@
-import styled from 'styled-components'
+import { Typography } from '@mui/material'
+// import styled from 'styled-components'
+import { styled } from '@mui/material/styles'
 
-
-export const HeroText = styled.h1`
+export const HeroText = styled(Typography)(({theme}) => `
     font-family: Poppins, sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
-    color: #FDF7FA;
+    color:  ${theme.palette.primary.contrastText}};
     margin-top: 15%;
     width: 60%;
     max-width: 100%;
@@ -23,4 +24,4 @@ export const HeroText = styled.h1`
         line-height: 3.5rem;
         width: 100%
     }
-`
+`)
