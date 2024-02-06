@@ -35,17 +35,20 @@ export const TextContainer = styled.div<{borderBottom?: boolean}>`
     width: 100%;
     && > h6 {
         font-size: 1.8rem;
+        line-height: 2.2rem;
     };
 
     & > p {
         position: absolute;
+        font-size: 1.1rem;
+        font-weight: 400;
     };
     & > p, h6 {
         letter-spacing: .05rem;
-        padding: 1.2rem;
+        padding: 1.2rem 1.2rem 0 1.2rem;
         line-height: 1.4rem;
     };
-    color: rgba(240, 246, 250);
+    color: rgb(240, 246, 250);
 `
 
 export const CardsSection = styled.section`
