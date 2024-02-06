@@ -8,8 +8,8 @@ export const Hero = () => {
             sx={{
                 marginTop: '145px',
                 width: '100%',
-                height: '700px',
-                maxHeight: '700px',
+                height: '800px',
+                maxHeight: '800px',
                 backgroundImage: `url(${HeroImage})`,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',

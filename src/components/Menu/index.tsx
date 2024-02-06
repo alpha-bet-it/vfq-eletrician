@@ -21,25 +21,7 @@ import AppBarImage from '../../images/vilmar-fernandez-logo-original-PhotoRoom.p
 import { StyledAppBar } from './styles'
 
 function Menu () {
-    // const boxShadowProps = {
-    //     boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.1), 0px 4px 5px 0px rgba(0,0,0,0.1), 0px 1px 10px 0px rgba(0,0,0,0.1)'
-    // }
     const [mobileOpen, setMobileOpen] = useState(false)
-    // const [menuPosition, setMenuPosition] = useState('relative')
-
-    // const stickNavbar = () => {
-    //     window.scrollY >= 155 ? setMenuPosition('fixed') : setMenuPosition('relative')
-    // }
-
-    // useEffect(() => {
-    //     window.addEventListener('scroll', stickNavbar)
-
-    //     return () => {
-    //         window.removeEventListener('scroll', stickNavbar)
-    //     }
-    // }, [])
-
-
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState)

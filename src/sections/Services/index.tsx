@@ -1,12 +1,13 @@
 import { Card } from "../../components/Card";
 import { CardsSection, CardsContainer } from "../../components/Card/styles";
+import { Title } from '../../components/Title'
 import { cards } from "../../mocks/cards";
-import { ServicesContainer, ServicesTitle } from './styles'
+import { ServicesContainer } from './styles'
 
 export const Services = () => (
   <>
     <ServicesContainer>
-      <ServicesTitle>Serviços</ServicesTitle>
+      <Title>Serviços</Title>
       <CardsSection>
         <CardsContainer>
           {cards.map(({ title, description }, index) => (
