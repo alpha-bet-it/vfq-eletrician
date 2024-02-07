@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import {
-    AppBar,
     Box,
     Toolbar,
     Button,
@@ -17,14 +16,20 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { AppBarItemsEnum } from '../../constants/menu'
 import { Img } from '../Img'
-import AppBarImage from '../../images/vilmar-fernandez-logo-original-PhotoRoom.png-PhotoRoom-300-120.png'
+import AppBarImage from '../../images/vfq.png'
 import { StyledAppBar } from './styles'
+
+const WHATS_APP_MESSAGE = 'Olá VFQ, gostaria de um orçamento!'
 
 function Menu () {
     const [mobileOpen, setMobileOpen] = useState(false)
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState)
+    }
+
+    const handleWhatsAppMessage = () => {
+        window.open(`https://wa.me/5562998070467?text=${WHATS_APP_MESSAGE.replace(/^\b/g, '+')}`, '_blank')
     }
 
     const drawer =  (
@@ -48,17 +53,31 @@ function Menu () {
         <>
             <Box sx={{ display: 'flex', margin: 0, padding: 0 }}>
                 <StyledAppBar>
-                    <Box sx={{ backgroundColor: '#153243', color: '#E6EBE0', display: 'flex', justifyContent: 'space-around' }}>
+                    <Box sx={{ backgroundColor: 'var(--main-color)', color: 'var(--light-color)', display: 'flex', justifyContent: 'space-around' }}>
                         <Box sx={{ maxWidth: '80%', width: '100%', display: 'flex', justifyContent: 'end' }}>
                             <Box sx={{ display: 'flex', padding: '10px 0' }}>
-                                <AiOutlineWhatsApp fontSize={'1.5rem'} />
-                                <Typography sx={{ fontSize: '1rem', fontWeight: 500, paddingLeft: '5px' }}>
-                                    (62) 9 9334-9288
-                                </Typography>
+                                <Button sx={{
+                                        ':hover': {
+                                            boxShadow: `
+                                                0px 4px 5px -3px rgba(0,0,0,0.1),
+                                                0px 6px 7px 0px rgba(0,0,0,0.1),
+                                                0px 2px 12px 0px rgba(0,0,0,0.1);
+                                            `,
+                                            backgroundColor: 'var(--light-color)',
+                                            color: 'var(--main-color-dark)'
+                                        },
+                                        backgroundColor: 'var(--light-color)',
+                                        color: 'var(--main-color)',
+                                    }} onClick={handleWhatsAppMessage}>
+                                    <AiOutlineWhatsApp fontSize={'1.5rem'} />
+                                    <Typography>
+                                        (62) 9 9807-0467
+                                    </Typography>
+                                </Button>
                             </Box>
                         </Box>
                     </Box>
-                    <Toolbar sx={{ padding: '20px 0', justifyContent: { sm: 'start', md: 'space-around' } }} disableGutters>
+                    <Toolbar sx={{ padding: '20px 0', justifyContent: { sm: 'start', md: 'space-around' }, backgroundColor: 'var(--light-color)' }} disableGutters>
                         <IconButton
                             color='secondary'
                             sx={{ mr: 2, display: { md: 'none', xs: 'block' } }}
@@ -68,7 +87,7 @@ function Menu () {
                         </IconButton>
                         <Box component={'div'} sx={{ maxWidth: '80%', display: { xs: 'none', md: 'flex' }, justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
                             <Box sx={{ display: 'block' }}>
-                                <Img src={AppBarImage} alt='image' sx={{ maxWidth: '160px', maxHeight: '120px' }} />
+                                <Img src={AppBarImage} alt='image' sx={{ maxWidth: '120px', maxHeight: '120px' }} />
                             </Box>
                             <Box>
                                 {AppBarItemsEnum.map((item) => (

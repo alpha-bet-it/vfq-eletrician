@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
-    background: #153242;
+    background: var(--main-color-dark);
     margin: 1rem;
     max-width: 100%;
     position: relative;
@@ -42,13 +42,14 @@ export const TextContainer = styled.div<{borderBottom?: boolean}>`
         position: absolute;
         font-size: 1.1rem;
         font-weight: 400;
+        font-family: var(--font-family);
     };
     & > p, h6 {
         letter-spacing: .05rem;
         padding: 1.2rem 1.2rem 0 1.2rem;
         line-height: 1.4rem;
     };
-    color: rgb(240, 246, 250);
+    color: var(--light-color);
 `
 
 export const CardsSection = styled.section`

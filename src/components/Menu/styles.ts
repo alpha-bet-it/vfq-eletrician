@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { AppBar, AppBarProps } from '@mui/material'
-
-interface IAppBarProps extends AppBarProps {
-    boxShadow?: string
-    backgroundColor?: string
-}
+import { AppBar } from '@mui/material'
 
 export const StyledLink = styled(Link)`
     text-decoration: none;

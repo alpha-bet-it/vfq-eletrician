@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 
 export const HeroText = styled.h1`
-    font-family: Poppins, sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
     color: #FDF7FA;

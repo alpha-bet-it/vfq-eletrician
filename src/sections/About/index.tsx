@@ -1,10 +1,11 @@
-import { AboutContainer, AboutHeader, AboutSection, AboutText } from './styles'
+import { Title } from '../../components/Title'
+import { AboutContainer, AboutSection, AboutText } from './styles'
 
 export const About = () => (
     <>
         <AboutSection>
             <AboutContainer>
-                <AboutHeader>Sobre</AboutHeader>
+                <Title>Sobre</Title>
                 <AboutText>
                     A vfq prestações de serviços elétricos é uma parceira confiável em soluções elétricas
                     Oferece uma gama completa de serviços que abrangem desde inspeção e projeto até

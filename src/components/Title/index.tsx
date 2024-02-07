@@ -16,7 +16,7 @@ export const Title = ({ children }: TitleProps) => {
           fontWeight: 700,
           display: 'block',
           maxWidth: '80%',
-          color: '#0F232F'
+          color: 'var(--main-color-dark)',
         }}
       >
         {children}
