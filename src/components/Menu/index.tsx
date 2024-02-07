@@ -91,7 +91,7 @@ function Menu () {
                             </Box>
                             <Box>
                                 {AppBarItemsEnum.map((item) => (
-                                    <Button key={item} sx={{ ":last-child": { paddingRight: 0 }, ':hover': { backgroundColor: 'transparent' } }}>
+                                    <Button key={item} sx={{ ":last-child": { paddingRight: 0 }, ':hover': { backgroundColor: 'transparent' } }} href='#about' >
                                         <Typography sx={{ fontSize: '1rem', fontWeight: 500, letterSpacing: '0.03rem', ':hover': { color: '#2C698C' }, color: '#0F232F' }}>
                                             {item.toUpperCase()}
                                         </Typography>

@@ -18,18 +18,47 @@
 
 body {
   margin: 0;
-  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--light-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Poppins';
+  src: 
+    url('./fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@100&display=swap');
+  src: url('./fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins/Poppins-Light.ttf') format('truetype');
+  font-weight: 200;
+}
+
+
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

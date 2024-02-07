@@ -1,1 +1,1 @@
-export const AppBarItemsEnum = ['sobre', 'trabalhos', 'serviços', 'orçamento']
+export const AppBarItemsEnum = ['sobre', 'serviços', 'orçamento']

@@ -10,6 +10,7 @@ export const HeroText = styled.h1`
     max-width: 100%;
     letter-spacing: 0.03rem;
     line-height: 4.5rem;
+    font-family: var(--font-family);
 
     @media(max-width: 970px) {
         font-size: 4rem;

@@ -13,8 +13,8 @@ export const MainPage = () => {
       <Grid container>
         <Grid item xs={12}>
           <Hero />
-          <Services />
           <About />
+          <Services />
         </Grid>
       </Grid>
   )
