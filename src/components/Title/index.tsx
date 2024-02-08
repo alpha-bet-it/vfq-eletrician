@@ -2,9 +2,12 @@ import { Typography } from '@mui/material'
 
 interface TitleProps {
   children: string
+  fontSize?: string
+  color?: string
+  variant?: string
 }
 
-export const Title = ({ children }: TitleProps) => {
+export const Title = ({ children, fontSize, color, variant }: TitleProps) => {
   return (
     <>
       <Typography
@@ -12,11 +15,11 @@ export const Title = ({ children }: TitleProps) => {
         component='h2'
         sx={{
           fontFamily: 'Poppins, sans-serif',
-          fontSize: 'var(--h2-font-size)',
+          fontSize: fontSize ?? 'var(--h2-font-size)',
           fontWeight: 700,
           display: 'block',
           maxWidth: '80%',
-          color: 'var(--main-color-dark)',
+          color: color ?? 'var(--main-color-dark)',
         }}
       >
         {children}

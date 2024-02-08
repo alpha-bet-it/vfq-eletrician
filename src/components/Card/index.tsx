@@ -1,5 +1,6 @@
 // import { Typography } from '@mui/material'
-import { CardContainer, TextContainer } from './styles'
+import { Title } from '../Title'
+import { CardContainer } from './styles'
 
 interface CardProps {
     title: string
@@ -10,12 +11,11 @@ export const Card = (props: CardProps) => {
     return (
         <>
             <CardContainer>
-                <TextContainer borderBottom={true}>
-                    <h6>{props.title}</h6>
-                </TextContainer>
-                <TextContainer>
+                    <Title
+                        color='var(--light-color)'
+                        fontSize='1.7rem'
+                    >{props.title}</Title>
                     <p>{props.description}</p>
-                </TextContainer>
             </CardContainer>
         </>
     )

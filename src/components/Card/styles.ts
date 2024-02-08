@@ -6,11 +6,8 @@ export const CardContainer = styled.div`
     background: var(--main-color-dark);
     margin: 1rem;
     width: 80%;
-    max-width: 100%;
     position: relative;
-    min-height: 35vh;
-    max-height: 50vh;
-    width: 100%;
+    min-height: 28vh;
     flex: 1 0 25%;
     border-radius: 5px;
     box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.1),
@@ -22,39 +19,19 @@ export const CardContainer = styled.div`
                     0px 2px 12px 0px rgba(0,0,0,0.3);
         cursor: pointer;
     }
+    & > h2 {
+        padding: 1.2rem 1.2rem 0 1.2rem;
+    }
+    & > p {
+        padding: 1.2rem;
+        color: var(--light-color);
+        font-family: var(--font-family);
+    }
     transition: box-shadow ease-out 0.4s;
-    
+
     @media(max-width: 500px) {
         flex: 100%;
-        height: 80vh
     }
-    @media(max-height: 400px) {
-        height: 80vh;
-        flex: 1 0 30%;
-    }
-`
-
-export const TextContainer = styled.div<{borderBottom?: boolean}>`
-    width: 100%;
-    && > h6 {
-        font-size: 1.8rem;
-        line-height: 2.2rem;
-        letter-spacing: .05rem;
-    };
-
-    & > p {
-        position: absolute;
-        font-size: 1.1rem;
-        font-weight: 400;
-        letter-spacing: .02rem
-    };
-
-    & > p, h6 {
-        padding: 1.2rem 1.2rem 0 1.2rem;
-        line-height: 1.4rem;
-        font-family: var(--font-family);
-    };
-    color: var(--light-color);
 `
 
 export const CardsSection = styled.section`
