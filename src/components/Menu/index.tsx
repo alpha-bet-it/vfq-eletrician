@@ -16,7 +16,7 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { AppBarItemsEnum } from '../../constants/menu'
 import { Img } from '../Img'
-import AppBarImage from '../../images/vfq.png'
+import AppBarImage from '../../images/vfq-logo.png'
 import { StyledAppBar } from './styles'
 
 const WHATS_APP_MESSAGE = 'Olá VFQ, gostaria de um orçamento!'
