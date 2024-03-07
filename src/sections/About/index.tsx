@@ -6,7 +6,7 @@ import { Img } from '../../components/Img'
 
 export const About = () => (
     <>
-        <AboutSection id='about'>
+        <AboutSection id='sobre'>
             <AboutContainer>
                 <Title>Sobre</Title>
                 <AboutTextAndImageContainer>

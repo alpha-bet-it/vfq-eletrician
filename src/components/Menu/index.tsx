@@ -40,7 +40,7 @@ function Menu () {
             <Divider />
             <List>
                 {AppBarItemsEnum.map((item) => (
-                    <ListItem key={item} disablePadding>
+                    <ListItem key={item} disablePadding  onClick={item === 'orçamento' ? handleWhatsAppMessage : undefined}>
                         <ListItemButton sx={{ textAlign: 'center' }}>
                             <ListItemText primary={item.toUpperCase()} />
                         </ListItemButton>
@@ -91,7 +91,7 @@ function Menu () {
                             </Box>
                             <Box>
                                 {AppBarItemsEnum.map((item) => (
-                                    <Button key={item} sx={{ ":last-child": { paddingRight: 0 }, ':hover': { backgroundColor: 'transparent' } }} href='#about' >
+                                    <Button key={item} sx={{ ":last-child": { paddingRight: 0 }, ':hover': { backgroundColor: 'transparent' } }} href={`#${item}`} onClick={item === 'orçamento' ? handleWhatsAppMessage : undefined}>
                                         <Typography sx={{ fontSize: '1rem', fontWeight: 500, letterSpacing: '0.03rem', ':hover': { color: '#2C698C' }, color: '#0F232F' }}>
                                             {item.toUpperCase()}
                                         </Typography>

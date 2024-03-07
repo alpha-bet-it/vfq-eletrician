@@ -20,5 +20,3 @@ export const MainPage = () => {
   )
 }
 
-
-// keyExtractor('card-item', index)
